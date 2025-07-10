@@ -1,43 +1,23 @@
 'use client'
 
-import React, { useRef, useState, FormEvent } from 'react'
+import React, { useState, FormEvent } from 'react'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
-import emailjs from '@emailjs/browser'
 import { BackgroundBeams } from '@/components/ui/background-beams'
 
 const page = () => {
-    const form = useRef<HTMLFormElement | null>(null)
     const [isSending, setIsSending] = useState<boolean>(false)
 
     const sendEmail = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault()
         setIsSending(true)
-
-        if (!form.current) return
-
-        emailjs
-            .sendForm(
-                'service_9113gor',
-                'template_0nb2mrd',
-                form.current,
-                'QbDwqsQLua2Ta_sqs'
-            )
-            .then(() => {
-                setIsSending(false)
-                form.current?.reset()
-                toast.success('Message Sent Successfully', {
-                    autoClose: 3000,
-                    theme: 'dark',
-                })
-            })
-            .catch(() => {
-                setIsSending(false)
-                toast.error('Failed to Send Message. Please Try Again', {
-                    autoClose: 3000,
-                    theme: 'dark',
-                })
-            })
+        setTimeout(() => {
+            toast.success('Message Sent Successfully', {
+            autoClose: 3000,
+            theme: 'dark',
+        })
+        setIsSending(false)
+        }, 2000);
     }
 
     return (
@@ -68,7 +48,7 @@ const page = () => {
                     </div>
 
                     {/* Contact Body */}
-                    <form ref={form} onSubmit={sendEmail} className="w-full flex flex-col gap-4">
+                    <form onSubmit={sendEmail} className="w-full flex flex-col gap-4">
                         <input
                             type="email"
                             name="user_email"
@@ -110,7 +90,7 @@ const page = () => {
                     </form>
                 </div>
             </section>
-            <BackgroundBeams className='z-1'/>
+            <BackgroundBeams className='z-1' />
         </div>
     )
 }

@@ -1,14 +1,19 @@
 'use client'
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 import courseData from "@/data/music_courses.json"
-
+import Image from "next/image";
+interface CourseType {
+    title: string,
+    description: string,
+    image: string
+}
 const page = () => {
     return (
         <div className="min-h-screen bg-black py-12 pt-36">
             <h1 className="text-4xl font-bold text-center">All courses {courseData.courses.length}</h1>
             <div className="flex flex-wrap justify-center">
-                {courseData.courses.map((course: any) => (
-                    <CardContainer className="inter-var mx-4">
+                {courseData.courses.map((course: CourseType) => (
+                    <CardContainer key={course.title} className="inter-var mx-4">
                         <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
                             <CardItem
                                 translateZ="50"
@@ -24,7 +29,7 @@ const page = () => {
                                 {course.description}
                             </CardItem>
                             <CardItem translateZ="100" className="w-full mt-4">
-                                <img
+                                <Image
                                     src={course.image}
                                     height="1000"
                                     width="1000"

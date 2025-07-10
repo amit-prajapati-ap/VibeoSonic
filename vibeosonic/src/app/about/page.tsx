@@ -1,6 +1,7 @@
 'use client'
 
 import { HeroHighlight } from "@/components/ui/hero-highlight"
+import Image from "next/image"
 import Link from "next/link"
 
 const page = () => {
@@ -13,7 +14,7 @@ const page = () => {
                         <Link href={'/courses'} className='px-4 py-2 w-28 text-white rounded-md bg-purple-700 hover:opacity-90 transition-opacity duration-200'>Enroll Now</Link>
                     </div>
                     <div className='h-[400px] xl:w-[800px] max-w-[400px] sm:max-w-full rounded-full border border-purple-500 overflow-hidden p-8 mx-auto'>
-                        <img src="/courses/music-prod.jpg" alt="Educational Image" className='object-cover rounded-full w-full h-full' />
+                        <Image src="/courses/music-prod.jpg" alt="Educational Image" className='object-cover rounded-full w-full h-full' />
                     </div>
                     <div className='lg:block hidden absolute w-8 h-8 bg-purple-600 rounded-full right-1/2 z-10'></div>
                     <div className='lg:block hidden absolute w-8 h-8 bg-purple-600 rounded-full right-0 bottom-0'></div>
