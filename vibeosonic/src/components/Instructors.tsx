@@ -36,7 +36,7 @@ const Instructors = () => {
     ];
 
     return (
-        <div className="relative h-[40rem] overflow-hidden flex items-center justify-center flex-col">
+        <div className="relative h-[40rem] w-full overflow-hidden flex items-center justify-center flex-col">
             <Boxes />
             <div className="flex items-center justify-center flex-col z-10">
                 <h2 className="text-2xl md:text-4xl lg:text-7xl font-bold tracking-wide bg-clip-text text-transparent bg-gradient-to-b from-teal-400 via-gray-300 to-teal-300">Meet Our Instructors</h2>

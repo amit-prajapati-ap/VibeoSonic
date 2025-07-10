@@ -3,8 +3,8 @@ import { FaLinkedin, FaTwitter, FaGithub} from 'react-icons/fa'
 
 const Footer = () => {
   return (
-    <div className='bg-black text-gray-400 pt-12 flex flex-col items-center'>
-      <div className='max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-4 md:text-lg text-base sm:px-6 lg:px-8'>
+    <div className='bg-black text-gray-400 mx-auto pt-12 flex flex-col items-center'>
+      <div className='max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-4 md:text-lg text-base sm:px-6 lg:px-8'>
         <div className='flex flex-col gap-2'>
             <h2 className='text-xl font-semibold tracking-wide uppercase bg-clip-text text-transparent bg-gradient-to-b from-teal-400 via-gray-300 to-teal-300'>About Us</h2>
             <div>

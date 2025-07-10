@@ -4,7 +4,7 @@ import { HoverBorderGradient } from "./ui/hover-border-gradient"
 
 const Hero = () => {
   return (
-    <div className="h-auto md:h-[40rem] rounded-md flex flex-col items-center justify-center relative overflow-hidden mx-auto py-10 md:py-0">
+    <div className="h-auto md:min-h-screen rounded-md flex flex-col items-center justify-center relative overflow-hidden mx-auto py-10 md:py-0">
       <div className="p-4 relative z-10 w-full text-center">
         <Spotlight
           className="-top-50 left-0 md:-top-40 md:left-40"
