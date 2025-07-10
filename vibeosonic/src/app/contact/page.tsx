@@ -5,7 +5,7 @@ import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import { BackgroundBeams } from '@/components/ui/background-beams'
 
-const page = () => {
+const Page = () => {
     const [isSending, setIsSending] = useState<boolean>(false)
 
     const sendEmail = (e: FormEvent<HTMLFormElement>) => {
@@ -21,7 +21,7 @@ const page = () => {
     }
 
     return (
-        <div className='text-white bg-black min-h-screen'>
+        <div className='text-white bg-black'>
             <section
                 id="contact"
                 className="px-[7vw] py-36 max-w-[1900px] mx-auto font-sans relative z-10"
@@ -33,7 +33,7 @@ const page = () => {
                     <h2 className="text-3xl sm:text-4xl font-bold text-white">CONTACT</h2>
                     <div className="w-24 h-1 mx-auto mt-2 bg-[#8245ec]"></div>
                     <p className="text-gray-300 mt-4 text-lg font-semibold">
-                        I'd love to hear from you, reach out for any opportunities or questions!
+                        I&apos;d love to hear from you, reach out for any opportunities or questions!
                     </p>
                 </div>
 
@@ -95,4 +95,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page
