@@ -40,7 +40,7 @@ const Instructors = () => {
             <Boxes />
             <div className="flex items-center justify-center flex-col z-10">
                 <h2 className="text-2xl md:text-4xl lg:text-7xl font-bold tracking-wide bg-clip-text text-transparent bg-gradient-to-b from-teal-400 via-gray-300 to-teal-300">Meet Our Instructors</h2>
-                <p className="text-base md:text-lg mt-4 sm:text-2xl font-semibold tracking-wide bg-clip-text text-transparent bg-gradient-to-tl from-gray-500 via-white to-blue-600">Discover the talented professionals who will guide your musical journey</p>
+                <p className="text-base text-center md:text-lg mt-4 sm:text-2xl font-semibold tracking-wide bg-clip-text text-transparent bg-gradient-to-tl from-gray-500 via-white to-blue-600">Discover the talented professionals who will guide your musical journey</p>
             </div>
             <div className="flex flex-row items-center justify-center mb-10 w-full z-10 mt-8">
                 <AnimatedTooltip items={instructors} />

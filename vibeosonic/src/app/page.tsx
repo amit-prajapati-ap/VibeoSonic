@@ -15,6 +15,7 @@ const Home = () => {
       <Testimonial/>
       <UpcomingWebinars/>
       <Instructors/>
+      
     </main>
   );
 }
